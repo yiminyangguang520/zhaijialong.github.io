@@ -1,2 +1,2 @@
-# Ignore files build by ndk and eclipse
+# Ignore files build by jekyll
 _site/
