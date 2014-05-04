@@ -19,6 +19,7 @@ address,caption,cite,code,dfn,em,th,var {font-style:normal;font-weight:500;}
 ol,ul {list-style:none;}
 caption,th{text-align:left;}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
+.entry h1,.entry h2,.entry h3,.entry h4,.entry h5,.entry h6{color:#b5e853;}
 q:before,q:after {content:'';}
 sup{vertical-align:text-top;}
 sub{vertical-align:text-bottom;}
@@ -32,12 +33,21 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;}
-a {color:#4A75B5;text-decoration:none;outline:none;}
-a:hover {text-decoration:underline}
-a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;}
+body{
+    margin: 0;
+    padding: 0;
+    background: #151515 url("../images/bkg.png") 0 0;
+    color: #eaeaea;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+a {text-decoration:none;outline:none;}
+a:hover {text-decoration:underline;text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);}
+a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;color: #63c0f5;
+text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);}
 a.external:hover {background-position:right -15px;}
-.entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#000;text-align:center;word-wrap: break-word;}
+.entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#b5e853;text-align:center;word-wrap: break-word;}
 .entry-title a:hover {text-decoration:none;}
 .entry-date {text-align:center;color:#999;margin-bottom:60px;font-size:14px;}
 
@@ -45,7 +55,7 @@ h2 {font-size:22px;font-weight:bold;margin-bottom:25px;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
 h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
 p {margin-bottom:40px;line-height:1.8em;}
-code {background:#eee;border:1px solid #ccc;padding:0 5px;font-family:"Courier";line-height:14px;font-size:14px;word-wrap:break-word; }
+code {/*background:#eee;border:1px solid #ccc;*/padding:0 5px;font-family:"Courier";line-height:14px;font-size:14px;word-wrap:break-word; }
 pre {background-color:#000;padding:15px;overflow:auto;margin-bottom:40px;font-size:14px;border: 1px solid #eee;-webkit-border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;border-radius: 4px 4px 4px 4px;color:#b9bdb6;margin-top:-20px; }
 h4+pre, h3+pre { margin-top:20px; }
 pre code{background-color:transparent;border:none;padding:0;word-wrap:normal;}
@@ -56,12 +66,19 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 
 
 /****************entry style**************/
-.sidenav { width:240px; background:#fff; float:right; padding:20px; margin-bottom:50px; box-shadow:0 1px 4px #ccc; }
-.sidenav h2 { font-size:18px; color:#333; margin-bottom:15px; }
+.sidenav { width:240px; background: rgba(15, 15, 15, 0.7);; float:right; padding:20px; margin-bottom:50px; box-shadow: 0 2px 6px #4B4747;}
+.sidenav h2 { font-size:18px; color:#333; margin-bottom:15px; color:#b5e853;}
 .sidenav ul { margin-bottom:50px; }
 .sidenav li { margin-bottom:12px; word-break: break-all;}
-.sidenav a { color:#555; font-size:14px; display:block;}
-.entry{margin-bottom:80px;width:680px; float:left; background:#fff; padding:30px; box-shadow:0 2px 6px #ccc; }
+.sidenav a { color:#eaeaea; font-size:14px; display:block;}
+.entry{
+    margin-bottom: 80px;
+    width: 680px;
+    float: left;
+    background: rgba(15, 15, 15, 0.7);
+    padding: 30px;
+    box-shadow: 0 2px 6px #4B4747;
+}
 .entry ul{margin-bottom:25px;margin-left:25px;}
 .entry p+ul {margin-top:-20px;}
 .entry ul li{margin-bottom:5px;list-style:disc;line-height:1.8em;}
@@ -96,20 +113,20 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 
 .index-content .artical-list { width:70%; margin:0 auto; }
 .index-content .artical-list li { margin-bottom:70px; }
-.index-content h2 { font-size:20px; margin-bottom:15px; word-break: break-all;}
-.index-content h2 a { color:#444 }
-.index-content h2 a:hover { color:#E50053; text-decoration:none; }
-.index-content .title-desc {color:#999;font-size:14px;line-height:1.6em;}
+.index-content h2 { color:#eaeaea; font-size:20px; margin-bottom:15px; word-break: break-all;}
+.index-content h2 a { color:#b5e853 }
+.index-content h2 a:hover { color:#b5e853; text-decoration:none; text-shadow: 0 0 5px rgba(104, 255, 231, 0.5);}
+.index-content .title-desc {color:#eaeaea;font-size:16px;line-height:1.6em;}
 
 .index-content .artical-cate { width:70%; margin:0 auto; }
-.index-content .artical-cate li { display:inline-block; *float:left; zoom:1; font-size:18px; width:32%; cursor:pointer; }
+.index-content .artical-cate li { display:inline-block; *float:left; zoom:1; font-size:18px; width:30%; cursor:pointer; }
 .index-content .artical-cate li a,
-.index-content .artical-cate li a:visited { display:inline-block; zoom:1; color:#000; width:100%; }
+.index-content .artical-cate li a:visited { display:inline-block; zoom:1; color:#eaeaea; width:100%; }
 .index-content .artical-cate li a:hover { text-decoration:none; }
-.index-content .artical-cate li.on span{ color:red; }
+.index-content .artical-cate li.on span{ color:#b5e853; }
 
 .index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
-.index-content #cateBar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
+.index-content #cateBar { display:inline-block; zoom:1; height:3px; background:#b5e853; position:relative; width:0; }
 
 /***************Wiki Style*****************/
 .wiki h2{cursor:pointer;}
@@ -119,7 +136,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 
 /***************contact style*************/
 #disqus_container {font-size:12px;}
-#disqus_container a.comment{font-size:14px;}
+#disqus_container a.comment{font-size:14px;color: #63c0f5;text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);}
 h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .about-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}
 
@@ -130,7 +147,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #menuIndex a:hover {text-decoration:none;}
 #menuIndex ul {margin-bottom:10px;}
 #menuIndex ul li{font-size:12px;margin-bottom:5px;word-wrap:break-word;padding-left:10px;}
-#menuIndex ul li.on{background-color:#f5f5f5;}
+#menuIndex ul li.on a{color: #63c0f5;text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);}
 #menuIndex li.h1{font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
 #menuIndex li.h3{padding-left:25px;}
 
