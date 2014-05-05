@@ -32,7 +32,9 @@ enum class/struct：
 
 基于跟踪的gc：
 
-- mark & sweep (spidermonkey使用这种方式)
-- mark & compact
-- mark & copy
+- mark-sweep (spidermonkey使用这种方式)
+- mark-compact
+- mark-copy
+
+c++11的最小垃圾回收：你™在逗我！
 ##第6章
