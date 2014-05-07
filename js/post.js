@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+    $.getScript('http://joshuasblog.disqus.com/embed.js',function(){});
+    
     var isMobile = {
         Android: function() {
             return navigator.userAgent.match(/Android/i);
