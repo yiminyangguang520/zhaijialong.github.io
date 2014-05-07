@@ -1,6 +1,7 @@
 $(document).ready(function(){
-    $.getScript('http://joshuasblog.disqus.com/embed.js',function(){});
-    
+	window.disqus_shortname = 'joshuasblog'; 
+	$.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){});
+
     var isMobile = {
         Android: function() {
             return navigator.userAgent.match(/Android/i);
