@@ -1,6 +1,4 @@
 $(document).ready(function(){
-	window.disqus_shortname = 'joshuasblog'; // required: replace example with your forum shortname
-	$.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){});
 
     var isMobile = {
         Android: function() {
