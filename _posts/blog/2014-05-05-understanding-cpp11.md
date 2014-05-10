@@ -51,3 +51,17 @@ thread_local线程生命周期。
 quick\_exit相比exit不执行对象的析构函数。at\_quick\_exit可以注册至少32个函数，调用顺序与注册顺序相反。
 
 ##第7章
+
+nullptr是编译器关键字，编译期常量，是nullptr\_t类型的一个值。nullptr\_t定义在cstddef：
+
+    typedef decltype(nullptr) nullptr_t//蛋生鸡。。。
+
+nullptr\_t类型只可以转换成指针类型，if(nullptr)或if(nullptr==0)都无法通过编译。 
+
+=default和=delete显示控制默认缺省函数，=delete可以禁止函数参数的转换，不应和explicit混用，带来语义上的混乱。
+
+lambda编译器一般通过仿函数(functor、function object)实现，所以实际是仿函数的语法糖。
+
+传值捕捉列表，传递的值在lambda定义就确定了，不随父作用域中的值改变。lambda默认是const的，值传递的变量不可改变。
+
+##第8章
