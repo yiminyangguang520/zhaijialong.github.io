@@ -65,3 +65,25 @@ lambda编译器一般通过仿函数(functor、function object)实现，所以�
 传值捕捉列表，传递的值在lambda定义就确定了，不随父作用域中的值改变。lambda默认是const的，值传递的变量不可改变。
 
 ##第8章
+
+    alignas(alignof(double)) char c;
+alignas参数必须是2的n次方。std::align动态调整对齐方式。。。略imba。。性能如何？
+
+增加[[]]属性为了编译器可以做一些代码优化。
+[[noreturn]]函数不会返回：抛出异常，终止程序，无限循环等。
+[[carries_dependency]]暂无编译器支持。。只适用于弱内存模型平台，作用有限。
+
+raw string literal使用R"()"：
+  
+    cout<<R"(hello,\n
+         world)"<<endl;
+    hello,\n
+            world
+
+##C++11弃用的特性
+
+1. auto，register不能再用于声明变量的存储方式
+2. export保留但无意义
+3. auto_ptr
+4. bind1st，bind2nd
+5. adapter
