@@ -9,20 +9,11 @@ category: blog
 2. c++转型操作符：static\_cast基本与C风格转型相同，const\_cast只用于改变const和volatile，dynamic\_cast处理继承中的向下转型，reinterpret\_cast与编译器相关不具备移植性，通常用于函数指针的转换，实际上reinterpret\_cast可以随意转换4字节整数，包括int和指针。
 3. 数组和多态不要混用。
 4. 如非必要，不提供默认构造函数。
-5. 使用提供相同功能的函数，而不要使用隐式类型转换操作符，例如：
-
-```
-class R{
-  double toDouble() const;//yes
-  operator double() const;//no
-}
-```
-这也是为何string使用c_str,而没有隐式转换操作符。
-
-对单参数constructor都声明为explicit。
-
+5. 对单参数constructor都声明为explicit。使用提供相同功能的函数，而不要使用隐式类型转换操作符（`operator 类型名() const;`），这也是为何string使用c_str,而没有隐式转换操作符。
 6. 前置++返回引用，后置++返回const类型。对自定义类型，优先使用前置++，--。
-7. 
+7. 只有操作符重载能让程序更易读，易写，易理解才去做。永远不要重载&& || 和,
+8. `new operator`调用`operator new`分配内存以及构造函数来初始化。`new operator`不能重载，`operator new`可以重载。placement new 是一个`operator new`的重载版本。同样的，我们一般调用的delete是`delete operator`，它调用析构函数和`operator delete`。所以，如果我们不需要构造或析构，可以显示使用`operator new`和`operator delete`，相当于malloc和free。[http://www.drdobbs.com/cpp/counting-objects-in-c/184403484](http://www.drdobbs.com/cpp/counting-objects-in-c/184403484 "counting objects in c++")
+
 
 
 [Joshua]:    http://joshuastray.github.io  "Joshua"
