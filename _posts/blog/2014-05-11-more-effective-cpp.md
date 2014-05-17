@@ -19,4 +19,10 @@ class R{
 ```
 这也是为何string使用c_str,而没有隐式转换操作符。
 
+对单参数constructor都声明为explicit。
+
+6. 前置++返回引用，后置++返回const类型。对自定义类型，优先使用前置++，--。
+7. 
+
+
 [Joshua]:    http://joshuastray.github.io  "Joshua"
