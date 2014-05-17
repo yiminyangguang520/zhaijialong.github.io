@@ -9,8 +9,14 @@ category: blog
 2. c++转型操作符：static\_cast基本与C风格转型相同，const\_cast只用于改变const和volatile，dynamic\_cast处理继承中的向下转型，reinterpret\_cast与编译器相关不具备移植性，通常用于函数指针的转换，实际上reinterpret\_cast可以随意转换4字节整数，包括int和指针。
 3. 数组和多态不要混用。
 4. 如非必要，不提供默认构造函数。
-5. 
+5. 使用提供相同功能的函数，而不要使用隐式类型转换操作符，例如：
 
-
+```
+class R{
+  double toDouble() const;//yes
+  operator double() const;//no
+}
+```
+这也是为何string使用c_str,而没有隐式转换操作符。
 
 [Joshua]:    http://joshuastray.github.io  "Joshua"
