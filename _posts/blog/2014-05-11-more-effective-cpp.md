@@ -12,8 +12,10 @@ category: blog
 5. 对单参数constructor都声明为explicit。使用提供相同功能的函数，而不要使用隐式类型转换操作符（`operator 类型名() const;`），这也是为何string使用c_str,而没有隐式转换操作符。
 6. 前置++返回引用，后置++返回const类型。对自定义类型，优先使用前置++，--。
 7. 只有操作符重载能让程序更易读，易写，易理解才去做。永远不要重载&& || 和,
-8. `new operator`调用`operator new`分配内存以及构造函数来初始化。`new operator`不能重载，`operator new`可以重载。placement new 是一个`operator new`的重载版本。同样的，我们一般调用的delete是`delete operator`，它调用析构函数和`operator delete`。所以，如果我们不需要构造或析构，可以显示使用`operator new`和`operator delete`，相当于malloc和free。[http://www.drdobbs.com/cpp/counting-objects-in-c/184403484](http://www.drdobbs.com/cpp/counting-objects-in-c/184403484 "counting objects in c++")
-
+8. `new operator`调用`operator new`分配内存以及构造函数来初始化。`new operator`不能重载，`operator new`可以重载。placement new 是一个`operator new`的重载版本。同样的，我们一般调用的delete是`delete operator`，它调用析构函数和`operator delete`。所以，如果我们不需要构造或析构，可以显示使用`operator new`和`operator delete`，相当于malloc和free。[http://www.drdobbs.com/cpp/counting-objects-in-c/184403484](http://www.drdobbs.com/cpp/counting-objects-in-c/184403484 "counting objects in c++") 
+9. 使用中异常：需要释放的资源无法被delete，如果在catch中delete就重复写了2次资源的清理（不好看），可使用smartpointer自动释放。
+10. 构造异常
+11. 析构异常
 
 
 [Joshua]:    http://joshuastray.github.io  "Joshua"
