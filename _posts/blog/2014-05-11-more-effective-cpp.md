@@ -14,8 +14,9 @@ category: blog
 7. 只有操作符重载能让程序更易读，易写，易理解才去做。永远不要重载&& || 和,
 8. `new operator`调用`operator new`分配内存以及构造函数来初始化。`new operator`不能重载，`operator new`可以重载。placement new 是一个`operator new`的重载版本。同样的，我们一般调用的delete是`delete operator`，它调用析构函数和`operator delete`。所以，如果我们不需要构造或析构，可以显示使用`operator new`和`operator delete`，相当于malloc和free。[http://www.drdobbs.com/cpp/counting-objects-in-c/184403484](http://www.drdobbs.com/cpp/counting-objects-in-c/184403484 "counting objects in c++") 
 9. 使用中异常：需要释放的资源无法被delete，如果在catch中delete就重复写了2次资源的清理（不好看），可使用smartpointer自动释放。
-10. 构造异常
-11. 析构异常
+10. 构造异常:构造函数中发生异常使对象没有成功构造，c++不会默认调用他的析构函数进行清理，在catch语句中delete**完全不起作用**。所以要在构造函数中进行try-catch，清理并继续抛出异常。
+11. 析构异常：避免异常从析构函数抛出。[http://bin-login.name/ftp/pub/docs/programming_languages/cpp/cffective_cpp/MAGAZINE/SU_FRAME.HTM#destruct](http://bin-login.name/ftp/pub/docs/programming_languages/cpp/cffective_cpp/MAGAZINE/SU_FRAME.HTM#destruct)
+12. 
 
 
 [Joshua]:    http://joshuastray.github.io  "Joshua"
