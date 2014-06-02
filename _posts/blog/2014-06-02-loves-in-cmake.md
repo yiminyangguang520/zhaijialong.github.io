@@ -93,9 +93,9 @@ else()
 set(ARCH_DIR "32-bit")
 endif()
 ```
-另外CMake有一些内置的变量，可以帮助做一些编译的控制：`[http://blog.sina.com.cn/s/blog_5413483701016dhf.html](系统默认变量和内置变量)`
+另外CMake有一些内置的变量，可以帮助做一些编译的控制：[http://blog.sina.com.cn/s/blog_5413483701016dhf.html](http://blog.sina.com.cn/s/blog_5413483701016dhf.html)
 
-官方文档：[http://www.cmake.org/cmake/help/cmake2.6docs.html](CMake 2.6)
+官方文档：[http://www.cmake.org/cmake/help/cmake2.6docs.html](http://www.cmake.org/cmake/help/cmake2.6docs.html)
 
 
 [Joshua]:    http://joshuastray.github.io  "Joshua"
