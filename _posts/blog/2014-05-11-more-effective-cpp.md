@@ -16,7 +16,10 @@ category: blog
 9. 使用中异常：需要释放的资源无法被delete，如果在catch中delete就重复写了2次资源的清理（不好看），可使用smartpointer自动释放。
 10. 构造异常:构造函数中发生异常使对象没有成功构造，c++不会默认调用他的析构函数进行清理，在catch语句中delete**完全不起作用**。所以要在构造函数中进行try-catch，清理并继续抛出异常。
 11. 析构异常：避免异常从析构函数抛出。[http://bin-login.name/ftp/pub/docs/programming_languages/cpp/cffective_cpp/MAGAZINE/SU_FRAME.HTM#destruct](http://bin-login.name/ftp/pub/docs/programming_languages/cpp/cffective_cpp/MAGAZINE/SU_FRAME.HTM#destruct)
-12. 
+12. exception object 在被捕捉时总是发生复制，并且以静态类型复制。编译器会通过复制构造出一个临时对象，传递给catch，所以如果catch的参数是以by value传递，会发生两次复制！！！catch中的参数只允许两类转换，指针到void*的转换，和子类到父类的转换。catch采用fit first策略，所以exception 子类的catch一定要写在父类前。
+13. 捕获异常时，通过指针传递，需要delete。通过值传递有2次复制，且如果catch参数是exception object的父类，那么子类的成员会被切割掉。所以最佳方式是在catch中by reference 传递。
+14. 不要为模板指定exception specification，因为不可能不知道其参数类型可能抛出什么异常。a函数调用b函数，如果b没有exception specification 那么a也不要有。set_unexpected设置自己的处理函数，可以在其中抛出自定义的异常。
+15. 异常处理机制会让程序体积变大，速度变慢。如果可以确保没有使用任何异常处理，链接的第三方库也没有，可以关闭编译器的异常处理支持。尽量少使用异常处理，只在必须的地方使用try和exception specification。
 
 
 [Joshua]:    http://joshuastray.github.io  "Joshua"
