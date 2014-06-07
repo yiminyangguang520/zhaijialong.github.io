@@ -20,6 +20,8 @@ category: blog
 13. 捕获异常时，通过指针传递，需要delete。通过值传递有2次复制，且如果catch参数是exception object的父类，那么子类的成员会被切割掉。所以最佳方式是在catch中by reference 传递。
 14. 不要为模板指定exception specification，因为不可能不知道其参数类型可能抛出什么异常。a函数调用b函数，如果b没有exception specification 那么a也不要有。set_unexpected设置自己的处理函数，可以在其中抛出自定义的异常。
 15. 异常处理机制会让程序体积变大，速度变慢。如果可以确保没有使用任何异常处理，链接的第三方库也没有，可以关闭编译器的异常处理支持。尽量少使用异常处理，只在必须的地方使用try和exception specification。
+16. 80-20原则。
+17. 
 
 
 [Joshua]:    http://joshuastray.github.io  "Joshua"
