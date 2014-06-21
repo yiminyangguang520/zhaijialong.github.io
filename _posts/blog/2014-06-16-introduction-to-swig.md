@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SWIG学习1：一个碉堡的工具SWIG
+title: 一个碉堡的工具SWIG
 description: SWIG 是一个非常优秀的脚本绑定代码生成工具，可以将 C/C++ 代码与多种语言相集成，开源免费。
 category: blog
 ---
