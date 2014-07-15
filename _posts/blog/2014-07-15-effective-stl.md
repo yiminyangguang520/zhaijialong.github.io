@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 读书笔记： Effective STL
+title: 读书笔记：《Effective STL》
 description: 
 category: blog
 ---
