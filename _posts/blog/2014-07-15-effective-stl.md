@@ -41,3 +41,14 @@ vector<int>().swap(v);
 ```
 
 vector<bool>中并不实际存储bool，而是使用1位来表示一个bool，类似位域。所以它实际上比不是一个标准的容器，很多操作并不适用。可以使用deque<bool>或bitset。
+
+向map插入新元素，优先使用insert，更新元素优先使用operator[]。
+
+iterator可以隐式转化为const_iterator和reverse_iterator。reverse_iterator使用base转为iterator，const_iterator使用advance和distance转为iterator。
+
+```
+advance(iter, distance<ConstIterator>(iter, const_iter))
+```
+
+对可随机访问的容器(vector,string,deque)的迭代器，这种转换是常数时间，其他容器是线性时间。
+在const_iterator和iterator之间总应该优先使用iterator。
