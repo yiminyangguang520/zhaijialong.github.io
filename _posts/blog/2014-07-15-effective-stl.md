@@ -52,3 +52,13 @@ advance(iter, distance<ConstIterator>(iter, const_iter))
 
 对可随机访问的容器(vector,string,deque)的迭代器，这种转换是常数时间，其他容器是线性时间。
 在const_iterator和iterator之间总应该优先使用iterator。
+
+remove并不能真正的删除容器中的元素，因为它无法访问到容器的erase，它只是把不符合删除条件的元素移动到前面。unique的行为也是类似的。
+remove需要和erase配合使用来真正的删除元素：
+
+```
+从v中删除所有等于99的元素
+v.erase(remove(v.begin(), v.end(), 99), v.end());
+```
+
+如果容器中存储的是动态分配的指针，直接使用remove则几乎肯定会造成泄漏。
