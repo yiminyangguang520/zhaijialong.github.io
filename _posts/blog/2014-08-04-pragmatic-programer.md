@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 读书笔记：《诚心要修炼之道》
+title: 读书笔记：《程序员修炼之道》
 description: 纯技术看太多了，换换口味，看看程序猿的“心灵鸡汤”。
 category: blog
 ---
