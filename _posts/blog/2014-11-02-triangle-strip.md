@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GL_TRIANGLE_STRIP的环绕规则
-description:记录一下，又忘了。。。
+description: 记录一下，又忘了。。。
 category: blog
 ---
 
