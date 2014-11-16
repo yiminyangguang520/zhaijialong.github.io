@@ -18,7 +18,7 @@ del{text-decoration:line-through;}
 address,caption,cite,code,dfn,em,th,var {font-style:normal;font-weight:500;}
 ol,ul {list-style:none;}
 caption,th{text-align:left;}
-h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
+h1,h2,h3,h4,h5,h6{/*font-size:100%;*/font-weight:500;}
 .entry h1,.entry h2,.entry h3,.entry h4,.entry h5,.entry h6{color:#b5e853;}
 q:before,q:after {content:'';}
 sup{vertical-align:text-top;}
